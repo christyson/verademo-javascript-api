@@ -1,0 +1,518 @@
+{
+"openapi": "3.0.0",
+"info": {
+"title": "VerademoAPI",
+"version": "1.0.0",
+"contact": {}
+},
+"servers": [
+{
+"url": "http://verademoapi-local.ctyson.vuln.sa.veracode.io:8000"
+}
+],
+"paths": {
+"/users/reset": {
+"get": {
+"tags": [
+"users"
+],
+"summary": "reset",
+"description": "reset",
+"operationId": "reset",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/getBlabbers": {
+"get": {
+"tags": [
+"users"
+],
+"summary": "getBlabbers",
+"description": "getBlabbers",
+"operationId": "getblabbers",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/ignore": {
+"post": {
+"tags": [
+"users"
+],
+"summary": "ignore",
+"description": "ignore",
+"operationId": "ignore",
+"parameters": [
+{
+"name": "blabberUsername",
+"in": "query",
+"schema": {
+"type": "string",
+"example": "johnny"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"blabberUsername": {
+"type": "string",
+"example": "johnny"
+}
+}
+},
+"examples": {
+"ignore": {
+"value": {
+"blabberUsername": "johnny"
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/listen": {
+"post": {
+"tags": [
+"users"
+],
+"summary": "listen",
+"description": "listen",
+"operationId": "listen",
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"blabberUsername": {
+"type": "string",
+"example": "johnny"
+}
+}
+},
+"examples": {
+"listen": {
+"value": {
+"blabberUsername": "johnny"
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/getProfileInfo": {
+"get": {
+"tags": [
+"users"
+],
+"summary": "getProfileInfo",
+"description": "getProfileInfo",
+"operationId": "getprofileinfo",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/getEvents": {
+"get": {
+"tags": [
+"users"
+],
+"summary": "getEvents",
+"description": "getEvents",
+"operationId": "getevents",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/updateProfile": {
+"post": {
+"tags": [
+"users"
+],
+"summary": "updateProfile",
+"description": "updateProfile",
+"operationId": "updateprofile",
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"blabName": {
+"type": "string",
+"example": "Stydvin"
+},
+"realName": {
+"type": "string",
+"example": "StuKevClyde"
+},
+"username": {
+"type": "string",
+"example": "brian"
+}
+}
+},
+"examples": {
+"updateProfile": {
+"value": {
+"blabName": "Stydvin",
+"realName": "StuKevClyde",
+"username": "brian"
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/register": {
+"post": {
+"tags": [
+"users"
+],
+"summary": "register",
+"description": "register",
+"operationId": "register",
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"cpassword": {
+"type": "string",
+"example": "brian"
+},
+"password": {
+"type": "string",
+"example": "brian"
+},
+"username": {
+"type": "string",
+"example": "carst"
+}
+}
+},
+"examples": {
+"register": {
+"value": {
+"cpassword": "brian",
+"password": "brian",
+"username": "carst"
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/getUsers": {
+"get": {
+"tags": [
+"users"
+],
+"summary": "getUsers",
+"description": "getUsers",
+"operationId": "getusers",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/getUser": {
+"get": {
+"tags": [
+"users"
+],
+"summary": "getUser",
+"description": "getUser",
+"operationId": "getuser",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/users/login": {
+"post": {
+"tags": [
+"users"
+],
+"summary": "login",
+"description": "login",
+"operationId": "login",
+"parameters": [
+{
+"name": "",
+"in": "query",
+"schema": {
+"type": "string"
+}
+}
+],
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"password": {
+"type": "string",
+"example": "brian"
+},
+"username": {
+"type": "string",
+"example": "brian"
+}
+}
+},
+"examples": {
+"login": {
+"value": {
+"password": "brian",
+"username": "brian"
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/posts/getBlabsForMe": {
+"get": {
+"tags": [
+"blabs"
+],
+"summary": "getBlabsForMe",
+"description": "getBlabsForMe",
+"operationId": "getblabsforme",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/posts/getBlabsByMe": {
+"get": {
+"tags": [
+"blabs"
+],
+"summary": "getBlabsByMe",
+"description": "getBlabsByMe",
+"operationId": "getblabsbyme",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/posts/addBlab": {
+"post": {
+"tags": [
+"blabs"
+],
+"summary": "addBlab",
+"description": "addBlab",
+"operationId": "addblab",
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"blab": {
+"type": "string",
+"example": "This is a test blab from Postman."
+}
+}
+},
+"examples": {
+"addBlab": {
+"value": {
+"blab": "This is a test blab from Postman."
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/posts/getAllBlabs": {
+"get": {
+"tags": [
+"blabs"
+],
+"summary": "getAllBlabs",
+"description": "getAllBlabs",
+"operationId": "getallblabs",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/posts/addBlabComment": {
+"post": {
+"tags": [
+"blabs"
+],
+"summary": "addBlabComment",
+"description": "addBlabComment",
+"operationId": "addblabcomment",
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"blabId": {
+"type": "number",
+"example": 72
+},
+"comment": {
+"type": "string",
+"example": "Test comment from Postman"
+}
+}
+},
+"examples": {
+"addBlabComment": {
+"value": {
+"blabId": 72,
+"comment": "Test comment from Postman"
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/posts/getBlabComments": {
+"post": {
+"tags": [
+"blabs"
+],
+"summary": "getBlabComments",
+"description": "getBlabComments",
+"operationId": "getblabcomments",
+"requestBody": {
+"content": {
+"application/json": {
+"schema": {
+"type": "object",
+"properties": {
+"blabId": {
+"type": "string",
+"example": "1 \" or blabid = \"4"
+}
+}
+},
+"examples": {
+"getBlabComments": {
+"value": {
+"blabId": "1 \" or blabid = \"4"
+}
+}
+}
+}
+}
+},
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+},
+"/posts/deleteBlab": {
+"delete": {
+"tags": [
+"blabs"
+],
+"summary": "deleteBlab",
+"description": "deleteBlab",
+"operationId": "deleteblab",
+"responses": {
+"200": {
+"description": ""
+}
+}
+}
+}
+},
+"tags": [
+{
+"name": "users"
+},
+{
+"name": "blabs"
+}
+]
+}
