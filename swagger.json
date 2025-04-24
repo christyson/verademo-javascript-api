@@ -7,7 +7,7 @@
 },
 "servers": [
 {
-"url": "http://verademoapi-local.ctyson.vuln.sa.veracode.io:8000"
+"url": "http://verademoapi.ctyson.vuln.sa.veracode.io:8000"
 }
 ],
 "paths": {
